@@ -3,8 +3,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import pinoHttp from 'pino-http';
 
-import { logger } from '@utils/logger';
 import routes from '@routes/index';
+import { logger } from '@utils/logger';
 
 export const createApp = (): Application => {
   const app = express();

@@ -2,8 +2,9 @@ import js from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import prettier from 'eslint-config-prettier';
+import { defineConfig } from "eslint/config";
 
-export default tseslint.config(
+export default defineConfig([
     { ignores: ['dist'] },
     {
         extends: [js.configs.recommended, ...tseslint.configs.recommended, prettier],
@@ -18,4 +19,4 @@ export default tseslint.config(
             '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
         },
     },
-);
+]);
